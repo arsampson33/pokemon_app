@@ -1,5 +1,6 @@
 const PORT = 3000
 const express = require('express')
+const pokemon = require('./models/pokemon')
 const app = express()
 
 
@@ -10,7 +11,9 @@ app.get('/',(req,res)=>{
 })
 
 
-
+app.get('/pokemon', (req,res) =>{
+    res.send(pokemon)
+})
 
 
 
